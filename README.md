@@ -25,7 +25,7 @@ Steps:
 [ ] Final Tests
 
 
-# Journal
+# Development Journal
 
 In the first day of development, I started by chosing the gitflow branching model.
 
