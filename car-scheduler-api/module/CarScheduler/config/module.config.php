@@ -28,7 +28,7 @@
 
     'view_manager' => array(
         'template_path_stack' => array(
-            'CarScheduler' => __DIR__ . '/../view',
+            'carscheduler' => __DIR__ . '/../view',
         ),
     ),
 );

@@ -4,11 +4,11 @@ As a test I`m developing a webpage and an API that will interact to schedule vis
 
 Steps:
 
-[x] Create Repository
+[X] Create Repository
 
-[x] Use GitFlow branching model
+[X] Use GitFlow branching model
 
-[ ] Database - Cars Table
+[X] Database - Cars Table
 
 [ ] Database - Availability Table
 
@@ -43,3 +43,45 @@ php composer.phar create-project --repository-url="https://packages.zendframewor
 
 ```
 
+After setting up zf skeleton I`ve started writing our API configs and routes, with the information on zf website and some articles I could build the 'car-scheduler-api\module\CarScheduler' folder wich in a nutshell contains the custom routes, functions and configs extending zf standards.
+
+The first Route built at 'car-scheduler-api\module\CarScheduler\config\module.config.php':
+
+```
+    //First Route Attempt
+    'router' => array(
+        'routes' => array(
+            'cars' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/cars[/][:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'CarScheduler\Controller\CarScheduler',
+                        'action'     => 'index',
+                    ),
+                ),
+            ),
+        ),
+    ),
+```
+
+Even though this route already identifies actions on the Controller using actions "add, get, edit, delete" I`ll be confirming if this can attend the standard "GET, POST, PUT, PATCH, DELETE" methods that I'm used to.
+
+The carsscheduler.db also in the car-scheduler-api\module\CarScheduler folder, was built using SQL syntax and is ready for the first tests:
+```
+CREATE TABLE cars (
+    id    INT (11)      NOT NULL,
+    name  VARCHAR (100) NOT NULL,
+    specs VARCHAR (100) NOT NULL,
+    price DOUBLE        NOT NULL,
+    PRIMARY KEY (
+        id
+    )
+);
+```
+
+In the next session I'll be adding the route actions to car-scheduler-api\module\CarScheduler\src\CarScheduler\Controller\CarSchedulerController.php
