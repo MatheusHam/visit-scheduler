@@ -21,9 +21,15 @@ In the first day of development, I started by chosing the gitflow branching mode
 
 To build the PHP RESTful Api I`ve chosen the Zend Framework. So first of all I installed PHP 7.4.8 from: https://www.php.net/downloads
 
-Then to build a project skeleton with zend I had to insall composer.phar, wich can be downloaded from https://getcomposer.org/download/ or you can run bellow commands to download it, and set up the minimal skeleton project:
+Then to build a project skeleton with zend I had to insall composer.phar, wich can be downloaded from https://getcomposer.org/download/ 
 
-'''
+As an option you can also run the commands below to download it, and set up the minimal skeleton project:
+
+```
+php -r "readfile('https://getcomposer.org/installer');" | php
+
+
 php composer.phar create-project --repository-url="https://packages.zendframework.com" zendframework/skeleton-application visit-scheduler/car-scheduler-api
 
-'''
+```
+
