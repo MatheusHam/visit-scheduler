@@ -3,15 +3,25 @@
 As a test I`m developing a webpage and an API that will interact to schedule visits for our customers. It will consist of a Homepage with a single option to process a schedule request, registering it on our database.
 
 Steps:
+
 [x] Create Repository
+
 [x] Use GitFlow branching model
+
 [ ] Database - Cars Table
+
 [ ] Database - Availability Table
+
 [ ] CRUD 
+
 [ ] Create/Map API Endpoints
+
 [ ] Basic React APP
+
 [ ] Customize Page
+
 [ ] ADD Api requests
+
 [ ] Final Tests
 
 
