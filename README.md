@@ -92,4 +92,4 @@ Today I had to rework the API module, and after that I decided to start the fron
 
 Running npm start on our visits-app now we get this first view:
 
-![alt text](https://imgur.com/PihzSzu)
+![Screenshot](journal/first_view.jpg)
