@@ -84,4 +84,11 @@ CREATE TABLE cars (
 );
 ```
 
-In the next session I'll be adding the route actions to car-scheduler-api\module\CarScheduler\src\CarScheduler\Controller\CarSchedulerController.php
+---
+
+13/07/2020
+
+Today I had to rework the API module, and after that I decided to start the front-end part of our application. So I had to come up with a structure using React + Redux + MaterialUI Components. After some testing I came up with a structure that I can know work on the design.
+
+Running npm start on our visits-app now we get this first view:
+![alt text]https://imgur.com/a/Sn0q6Rq
