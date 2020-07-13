@@ -8,15 +8,17 @@ Steps:
 
 [X] Use GitFlow branching model
 
-[X] Database - Cars Table
+~~[X] Database - Cars Table~~
 
-[ ] Database - Availability Table
+~~[ ] Database - Availability Table~~
 
-[ ] CRUD 
+~~[ ] CRUD~~
 
 [ ] Create/Map API Endpoints
 
-[ ] Basic React APP
+[X] Basic React-Redux APP
+
+[X] Add First MaterialUI Component
 
 [ ] Customize Page
 
@@ -84,4 +86,14 @@ CREATE TABLE cars (
 );
 ```
 
-In the next session I'll be adding the route actions to car-scheduler-api\module\CarScheduler\src\CarScheduler\Controller\CarSchedulerController.php
+---
+
+13/07/2020
+
+Today I had to rework the API module, and after that I decided to start the front-end part of our application. So I had to come up with a structure using React + Redux + MaterialUI Components. After some testing I came up with a structure that I can now work on the design.
+
+Running npm start on our visits-app now we get this first view:
+
+![Screenshot](./journal/first_view.jpg)
+
+Now Ill be focusing on the front-end part, so I can design the ZF2 Api with exactly what I need for the front-end.
