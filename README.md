@@ -92,8 +92,18 @@ CREATE TABLE cars (
 
 Today I had to rework the API module, and after that I decided to start the front-end part of our application. So I had to come up with a structure using React + Redux + MaterialUI Components. After some testing I came up with a structure that I can now work on the design.
 
-Running npm start on our visits-app now we get this first view:
+Running npm start on our ~~visits-app~~ now we get this first view:
 
 ![Screenshot](./journal/first_view.jpg)
 
 Now Ill be focusing on the front-end part, so I can design the ZF2 Api with exactly what I need for the front-end.
+
+=======
+
+14/07/2020
+
+Reworking the structure of the app, found out some bugs and better strategies. Before implementing the PHP Backend, I`ll finish the front end part, changing containers and its content to replicate the test example, so far:
+
+![Screenshot](./journal/app_progress.jpg)
+
+Note: Working this stack requires previous knowledge pure html/css/js does not help a lot, after lots of attempts I understood the "theme" functionalities from MaterialUI. Now things are moving. So far I've spent 8 hours in this test.
