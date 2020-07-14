@@ -1,11 +1,10 @@
 {
-  "name": "visits-app",
+  "name": "loop-app",
   "version": "0.1.0",
-  "description": "Loop Cars app for test.",
-  "main": "src/index.js",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "",
+    "@material-ui/icons": "latest",
+    "@material-ui/core": "latest",
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
