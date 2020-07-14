@@ -106,4 +106,4 @@ Reworking the structure of the app, found out some bugs and better strategies. B
 
 ![Screenshot](./journal/app_progress.jpg)
 
-Note: Working this stack requires previous knowledge pure html/css/js does not help a lot, after lots of attempts I understood the "theme" functionalities from MaterialUI. Now things are moving. So far I've spent 8 hours in this test.
+Note: Pure html/css/js does not help a lot with this stack, after many attempts I understood the "theme" functionalities from MaterialUI and things are evolving. So far I've spent 8 hours in this test.
