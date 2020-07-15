@@ -1,11 +1,12 @@
 import React from 'react'
-import ButtonAppBar from './TopBar'
-import AutoGrid from './Container'
+import TopBar from './TopBar'
+import VisitContainer from './VisitContainer'
+
 
 const App = () => (
   <div>
-      <ButtonAppBar />
-      <AutoGrid />
+    <TopBar />
+    <VisitContainer />
   </div>
 )
 

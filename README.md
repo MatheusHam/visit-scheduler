@@ -106,4 +106,16 @@ Reworking the structure of the app, found out some bugs and better strategies. B
 
 ![Screenshot](./journal/app_progress.jpg)
 
-Note: Pure html/css/js does not help a lot with this stack, after many attempts I understood the "theme" functionalities from MaterialUI and things are evolving. So far I've spent 8 hours in this test.
+Note: Pure html/css/js does not help a lot with this stack, after many attempts I understood the "theme" functionalities from MaterialUI and things are evolving. So far I've spent 8 hours in this test.gi
+
+=======
+
+15/07/2020
+
+Today I've progressed a lot in the layout using MaterialUI components and themes. Current state:
+
+![Screenshot](./layout_phase2.jpg)
+
+Finally I have the final structure and all I have to work on are the custom scripts for the front-end, and start implementing reducers and php-backend to communicate with the single api endpoint I've created, it's been a real challenge and it forced myself to learn a lot in 4 days. Tomorrow I'll finish adjustments on this page and will try to fix responsiveness on mobile devices, since my containers are not containing its elements:
+
+![Screenshot](./mobile_front_problem.jpg)

@@ -4,38 +4,39 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Print from '../actions/Print'
+
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-    menuButton: {
-      marginRight: theme.spacing(1),
-      width: theme.spacing(15)
-    },
-    title: {
-      flexGrow: 1,
-    },
+  root: {
+    flexGrow: 1,
+  },
+  title: {
+    flexGrow: 1,
+    color: "black",
+  },
+  bar: {
+    backgroundColor: 'white'
+  },
 
-    bar: {
-      backgroundColor: 'white'
-    }
-  }));
+  logo: {
+    marginRight: theme.spacing(20)
+  }
+}));
 
 
-export default function ButtonAppBar() {
+export default function TopBar() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.bar}>
           <Typography variant="h6" className={classes.title}>
-            Loop Carros
+          <img src={require("../looplogo.png")} alt="Loop Logo" ></img>
           </Typography>
-          <Button color="black" onClick={Print()}>Carros</Button>
-          <Button color="black">Compras</Button>
-          <Button color="black">Vendas</Button>
+          
+            <Button color="black">Vender</Button>
+            <Button color="black">Comprar</Button>
+            <Button color="black">Lojas</Button>
         </Toolbar>
       </AppBar>
     </div>

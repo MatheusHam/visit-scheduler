@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
 
-    Button:{
+    Button: {
         width: 200
     },
 
@@ -77,7 +77,6 @@ export default function AutoGrid() {
 
     return (
         <div className={classes.root}>
-
             <Grid container spacing={0}>
                 <Grid item xs={3}>
                 </Grid>
@@ -113,16 +112,16 @@ export default function AutoGrid() {
                                 <RadioGroup
                                     name="spacing"
                                     aria-label="spacing"
-                                    value2={spacing.toString()}
+                                    value={spacing.toString()}
                                     onChange={handleChange}
                                     row
                                 >
-                                    {[0, 1, 2, 3, 4, 5, 6].map((value2) => (
+                                    {[0, 1, 2, 3, 4, 5, 6].map((value) => (
                                         <FormControlLabel
-                                            key={value2}
-                                            value={value2.toString()}
+                                            key={value}
+                                            value={value.toString()}
                                             control={<Radio />}
-                                            label={value2.toString()}
+                                            label={value.toString()}
                                         />
                                     ))}
                                 </RadioGroup>
@@ -132,13 +131,14 @@ export default function AutoGrid() {
 
 
                             <Grid item xs={12}>
-                                <p className={classes.schedule}>Escolha o Horario</p>
+                                <p className={classes.schedule} >oioioioiasdasdasdasdasdasdasdoioioi</p>
                                 <FormLabel></FormLabel>
                                 <RadioGroup
                                     name="spacing"
                                     aria-label="spacing"
                                     value={spacing.toString()}
                                     onChange={handleChange}
+                                    overflow="hidden"
                                     row
                                 >
                                     {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((value) => (
@@ -161,6 +161,7 @@ export default function AutoGrid() {
                         </Grid>
                     </Paper>
                 </Grid>
+
 
             </Grid>
         </div>
