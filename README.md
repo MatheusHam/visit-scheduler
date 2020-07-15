@@ -114,8 +114,8 @@ Note: Pure html/css/js does not help a lot with this stack, after many attempts 
 
 Today I've progressed a lot in the layout using MaterialUI components and themes. Current state:
 
-![Screenshot](./layout_phase2.jpg)
+![Screenshot](./journal/layout_phase2.png)
 
 Finally I have the final structure and all I have to work on are the custom scripts for the front-end, and start implementing reducers and php-backend to communicate with the single api endpoint I've created, it's been a real challenge and it forced myself to learn a lot in 4 days. Tomorrow I'll finish adjustments on this page and will try to fix responsiveness on mobile devices, since my containers are not containing its elements:
 
-![Screenshot](./mobile_front_problem.jpg)
+![Screenshot](./journal/mobile_front_problem.jpeg)
