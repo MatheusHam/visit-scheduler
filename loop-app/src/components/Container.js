@@ -9,38 +9,30 @@ import Radio from '@material-ui/core/Radio';
 import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
+
     root: {
         flexGrow: 1,
-        alignContent: 'center',
-        width: '400vh'
-
-    },
-    paper: {
-        marginTop: theme.spacing(3),
-        padding: theme.spacing(2),
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        borderRadius: 25,
-        height: 200,
-        width: 100,
     },
 
     container: {
-        marginTop: theme.spacing(3)
+        marginTop: theme.spacing(3),
+        padding: theme.spacing(2),
+        borderRadius: 25,
     },
 
-    paperTop: {
-        marginTop: theme.spacing(3),
+    paper: {
+        marginTop: theme.spacing(0),
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
         borderRadius: 25,
-        height: 200
-
+        height: 25,
+        width: '90%',
     },
 
     paperBox: {
         marginTop: theme.spacing(3),
+        marginBottom: 20,
         padding: theme.spacing(2),
         textAlign: 'center',
         color: theme.palette.text.secondary,
@@ -48,10 +40,28 @@ const useStyles = makeStyles((theme) => ({
         height: 10
     },
 
-    Button: {
+    ButtonActionBar: {
+        marginTop: theme.spacing(2),
+        width: 25,
+        height: 20,
+        backgroundColor: 'white',
+        color: 'black',
+    },
 
-    }
+    paperLeft: {
+        marginTop: theme.spacing(2),
+        padding: theme.spacing(2),
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        borderRadius: 25,
+        height: 225,
+        width: 100,
+    },
 
+
+    Button:{
+        width: 200
+    },
 
 }));
 
@@ -68,24 +78,61 @@ export default function AutoGrid() {
     return (
         <div className={classes.root}>
 
-            <Grid container spacing={1}>
+            <Grid container spacing={0}>
+                <Grid item xs={3}>
+                </Grid>
 
-                <Grid item xs={2}>
-                    <Paper className={classes.paper}>Car Information</Paper>
+                <Grid item xs={9}>
+                    <Button variant="contained" color="secondary" className={classes.ButtonActionBar}>
+                        voltar
+                                </Button>
+                </Grid>
+
+                <Grid item xs={3}>
+                </Grid>
+
+                <Grid item xs={1}>
+                    <Paper className={classes.paperLeft}>Car Information</Paper>
                 </Grid>
 
 
-                <Grid item xs={3}>
+                <Grid item xs={4}>
                     <Paper className={classes.control}>
                         <Grid container className={classes.container}>
-                            <Grid item>
-                                <Paper elevation={2} className={classes.paperBox}> Agende o dia e horario da sua visita!
+                            <Grid item xs={12}>
+                                <Paper elevation={2} className={classes.paper}> Agende a visita!
                                     </Paper>
-
                             </Grid>
 
 
-                            <Grid item>
+
+
+                            <Grid item xs={12}>
+                                <p className={classes.schedule}>Escolha a data:</p>
+                                <FormLabel></FormLabel>
+                                <RadioGroup
+                                    name="spacing"
+                                    aria-label="spacing"
+                                    value2={spacing.toString()}
+                                    onChange={handleChange}
+                                    row
+                                >
+                                    {[0, 1, 2, 3, 4, 5, 6].map((value2) => (
+                                        <FormControlLabel
+                                            key={value2}
+                                            value={value2.toString()}
+                                            control={<Radio />}
+                                            label={value2.toString()}
+                                        />
+                                    ))}
+                                </RadioGroup>
+                            </Grid>
+
+
+
+
+                            <Grid item xs={12}>
+                                <p className={classes.schedule}>Escolha o Horario</p>
                                 <FormLabel></FormLabel>
                                 <RadioGroup
                                     name="spacing"
@@ -106,7 +153,7 @@ export default function AutoGrid() {
                             </Grid>
 
 
-                            <Grid item>
+                            <Grid item className={classes.actionButton}>
                                 <Button variant="contained" color="secondary" className={classes.Button}>
                                     Agendar Visita
                                 </Button>
@@ -114,11 +161,6 @@ export default function AutoGrid() {
                         </Grid>
                     </Paper>
                 </Grid>
-
-                <Grid item xs={6}>
-
-                </Grid>
-
 
             </Grid>
         </div>

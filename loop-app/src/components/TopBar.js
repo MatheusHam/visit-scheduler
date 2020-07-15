@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Print from '../actions/Print'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,7 +33,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Loop Carros
           </Typography>
-          <Button color="black">Carros</Button>
+          <Button color="black" onClick={Print()}>Carros</Button>
           <Button color="black">Compras</Button>
           <Button color="black">Vendas</Button>
         </Toolbar>
