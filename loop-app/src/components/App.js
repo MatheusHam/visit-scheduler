@@ -7,6 +7,7 @@ class App extends React.Component {
 
   state = {
     days: ["01/01", "01/02", "01/03", "01/01", "01/01", "01/01"],
+
     timeschedules: ["08:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
 
     car: {
@@ -15,11 +16,8 @@ class App extends React.Component {
       "price": "$10.000",
       "city": "Osasco"
     },
-
     status: "true"
-
   }
-
 
   removeComponents = () => {
     console.log('O Button Passou Por Aqui')
@@ -32,14 +30,16 @@ class App extends React.Component {
   }
 
   render() {
+
+
     return (
       <div>
         <TopBar />
         <div>
           <VisitContainer car={this.state.car}
-            days={this.state.days}
-            timeschedules={this.state.timeschedules}
-            removeComponents={this.removeComponents} />
+                          days={this.state.days}
+                          timeschedules={this.state.timeschedules}
+                          removeComponents={this.removeComponents} />
         </div>
       </div>
     )

@@ -119,3 +119,32 @@ Today I've progressed a lot in the layout using MaterialUI components and themes
 Finally I have the final structure and all I have to work on are the custom scripts for the front-end, and start implementing reducers and php-backend to communicate with the single api endpoint I've created, it's been a real challenge and it forced myself to learn a lot in 4 days. Tomorrow I'll finish adjustments on this page and will try to fix responsiveness on mobile devices, since my containers are not containing its elements:
 
 ![Screenshot](./journal/mobile_front_problem.jpg)
+
+======
+
+16/07/2020
+
+Progressing to implement the backend part of the application, todays work was all about customizing our front-end to render components based on our back-end data. Post refactoring these lines of codes will receive Available dates and timestamps to be options for the user:
+
+```
+                        <div>
+                            {days.map(function (day, index) {
+                                return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{day}</Button>);
+                            })}
+                        </div>
+                        <div>
+                            {timeschedules.map(function (time, index) {
+                                return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{time}</Button>);
+                            })}
+                        </div>
+
+                        <Button variant="contained" className={classes.customButtonSchedule} disableElevation onClick={() => {props.removeComponents()}}>Agendar Visita</Button>
+```
+
+With that I can now move to input the backend data using php as requested. The data will contain car information, dates and timestamps availables for schedule. with the backend done I`ll be adjusting the application with five different renders:
+
+- Choose a car
+- Chosse date/timestamp
+- Press Schedule Button
+- Confirm Schedule Info
+- Schedule Success
