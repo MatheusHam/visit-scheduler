@@ -4,13 +4,25 @@ import VisitContainer from './VisitContainer'
 
 
 class App extends React.Component {
+
+  car = {
+      "name": "Fiat Argo",
+      "specs": "v8 2.0",
+      "price": "$10.000",
+      "city": "Osasco"
+  }
+  
+
+
   render() {
     return (
       <div>
         <TopBar />
-        <VisitContainer />
-      </div >
-    );
+        <div>
+        <VisitContainer car={ this.car} />
+        </div>
+      </div>
+    )
   }
 }
 

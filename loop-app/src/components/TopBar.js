@@ -24,21 +24,34 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function TopBar() {
+const Bar = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar className={classes.bar}>
           <Typography variant="h6" className={classes.title}>
-          <img src={require("../looplogo.png")} alt="Loop Logo" ></img>
+            <img src={require("../looplogo.png")} alt="Loop Logo" ></img>
           </Typography>
-          
-            <Button color="black">Vender</Button>
-            <Button color="black">Comprar</Button>
-            <Button color="black">Lojas</Button>
+
+          <Button color="black">Vender</Button>
+          <Button color="black">Comprar</Button>
+          <Button color="black">Lojas</Button>
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+
+class TopBar extends React.Component {
+  render() {
+    return (
+      <div>
+        <Bar />
+      </div>
+
+    );
+  }
+}
+
+export default TopBar;
