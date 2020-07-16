@@ -3,11 +3,15 @@ import TopBar from './TopBar'
 import VisitContainer from './VisitContainer'
 
 
-const App = () => (
-  <div>
-    <TopBar />
-    <VisitContainer />
-  </div>
-)
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <TopBar />
+        <VisitContainer />
+      </div >
+    );
+  }
+}
 
-export default App
+export default App;
