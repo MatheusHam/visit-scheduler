@@ -31,7 +31,7 @@ const Bar = () => {
       <AppBar position="static">
         <Toolbar className={classes.bar}>
           <Typography variant="h6" className={classes.title}>
-            <img src={require("../looplogo.png")} alt="Loop Logo" ></img>
+            <img src={require("../media/looplogo.png")} alt="Loop Logo" ></img>
           </Typography>
 
           <Button color="black">Vender</Button>
