@@ -7,9 +7,7 @@ class App extends React.Component {
 
   state = {
     days: ["01/01", "01/02", "01/03", "01/01", "01/01", "01/01"],
-
     timeschedules: ["08:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-
     car: {
       "name": "Fiat Argo",
       "specs": "v8 2.0",
