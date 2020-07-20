@@ -149,3 +149,9 @@ With that I can now move to input the backend data using php as requested. The d
 - Press Schedule Button
 - Confirm Schedule Info
 - Schedule Success
+
+======
+
+20/07/2020
+
+Started by reviewing the whole repository, adding states and design the flow of the user experience from selecting a car to confirming the schedule
