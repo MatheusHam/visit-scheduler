@@ -155,3 +155,25 @@ With that I can now move to input the backend data using php as requested. The d
 20/07/2020
 
 Started by reviewing the whole repository, adding states and design the flow of the user experience from selecting a car to confirming the schedule
+
+Now we have 3 steps so far, the components render as the states changes when buttons are clicked.:
+
+![Screenshot](./journal/step1.png)
+![Screenshot](./journal/step2.png)
+![Screenshot](./journal/step3.png)
+
+```javascript
+changeComponents = (nextRender) => {
+    this.setState(
+      {
+        page: nextRender
+      }
+    )
+  } 
+```
+
+With this now I can set the components that will be rendered according to a page variable. This is the first way I implemented this change of renders, I'm studying other solutions to avoid boilerplate code and overengineering simple components, as React offers a lot of built in functions to Component that I'm not quite aware of.
+
+
+
+

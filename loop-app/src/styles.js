@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: theme.spacing(6),
         borderRadius: '100%',
         lineHeight: '50px',
-        backgroundColor: 'white'
+        backgroundColor: 'white' 
     },
 
     customButtonTime: {
@@ -54,11 +54,27 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'white'
     },
 
-    customeButtonSchedule: {
-        backgroundColor: 'red'
-    }
+    customButtonSchedule: {
+        backgroundColor: '#ff123c',
+        color: 'white'
+    },
 
-    
+    customButtonConfirm: {
+        marginTop: theme.spacing(2),
+        backgroundColor: '#ff123c',
+        color: 'white'
+    },
+
+    leftBoxyTypo : {
+        fontWeight: 'bold'
+    },
+
+    backButton: {
+        marginTop: theme.spacing(0),
+        lineHeight: '5px',
+        marginBot: theme.spacing (2)
+    },
+
 }));
 
 

@@ -43,7 +43,7 @@ const Bar = () => {
   );
 }
 
-class TopBar extends React.Component {
+export default class TopBar extends React.Component {
   render() {
     return (
         <Bar />
@@ -51,4 +51,3 @@ class TopBar extends React.Component {
   }
 }
 
-export default TopBar;

@@ -6,37 +6,36 @@ import VisitContainer from './VisitContainer'
 class App extends React.Component {
 
   state = {
-            days: ["01/01", "01/02", "01/03", "01/01", "01/01", "01/01"],
-            timeschedules: ["08:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
-            car: {
-                    "name": "Fiat Argo",
-                    "specs": "v8 2.0",
-                    "price": "$10.000",
-                    "city": "Osasco"
-                  },
-        }
+    days: ["01/08", "02/08", "03/08", "04/08", "05/08", "06/08"],
+    timeschedules: ["08:00", "10:00", "12:00", "14:00", "16:00", "18:00"],
+    car: {
+      "name": "Fiat Argo",
+      "specs": "REX FULL V8 4P AUTOMATICO",
+      "price": "$10.000",
+      "city": "Osasco - SP"
+    },
+    page: 'initial',
+  }
 
-  removeComponents = () => {
-    console.log('O Button Passou Por Aqui')
+  changeComponents = (nextRender) => {
     this.setState(
       {
-        status: 'false'
+        page: nextRender
       }
     )
-    console.log(this.state.status)
-  }
+  } 
   render() {
-
 
     return (
       <div>
         <TopBar />
         <VisitContainer car={this.state.car}
-                        days={this.state.days}
-                        timeschedules={this.state.timeschedules}
-                        status={this.state.status}
-                        removeComponents={this.removeComponents} />
+          days={this.state.days}
+          timeschedules={this.state.timeschedules}
+          changeComponents={this.changeComponents}
+          page={this.state.page} />
       </div>
+
     )
   }
 }
