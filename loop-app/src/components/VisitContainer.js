@@ -44,16 +44,16 @@ const Container = props => {
                             </Typography>
                         <div>
                             {days.map(function (day, index) {
-                                return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{day}</Button>);
+                                return (<Button variant="contained" className={classes.customButtonWeek} key={index}>{day}</Button>);
                             })}
                         </div>
                         <div>
                             {timeschedules.map(function (time, index) {
-                                return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{time}</Button>);
+                                return (<Button variant="contained" className={classes.customButtonWeek} key={index}>{time}</Button>);
                             })}
                         </div>
 
-                        <Button variant="contained" className={classes.customButtonSchedule} disableElevation onClick={() => {props.removeComponents()}}>Agendar Visita</Button>
+                        <Button variant="contained" className={classes.customButtonSchedule} disableElevation onClick={() => { props.removeComponents() }}>Agendar Visita</Button>
 
                     </Paper>
                 </Grid>
@@ -67,9 +67,9 @@ class visitContainer extends React.Component {
     render() {
         const { car, days, timeschedules, removeComponents } = this.props;
         return (
-            <div>
-                <Container car={car} days={days} timeschedules={timeschedules} removeComponents={removeComponents} />
-            </div>
+
+            <Container car={car} days={days} timeschedules={timeschedules} removeComponents={removeComponents} />
+
         );
     }
 }

@@ -33,12 +33,10 @@ class App extends React.Component {
     return (
       <div>
         <TopBar />
-        <div>
-          <VisitContainer car={this.state.car}
-                          days={this.state.days}
-                          timeschedules={this.state.timeschedules}
-                          removeComponents={this.removeComponents} />
-        </div>
+        <VisitContainer car={this.state.car}
+          days={this.state.days}
+          timeschedules={this.state.timeschedules}
+          removeComponents={this.removeComponents} />
       </div>
     )
   }
