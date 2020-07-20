@@ -1,6 +1,6 @@
 # visit-scheduler
 
-As a test I`m developing a webpage and an API that will interact to schedule visits for our customers. It will consist of a Homepage with a single option to process a schedule request, registering it on our database.
+As a project I'm developing a webpage and an API that will interact with each other in order to schedule visits for customers. It will consist of a Homepage with a single option to process a schedule request, recording it on the database.
 
 Steps:
 
@@ -29,15 +29,17 @@ Steps:
 
 # Development Journal
 
-In the first day of development, I started by chosing the gitflow branching model.
+On the first day of development, I started by chosing the gitflow branching model.
+
 
 To build the PHP RESTful Api I`ve chosen the Zend Framework. So first of all I installed PHP 7.4.8 from: https://www.php.net/downloads
 
-Then to build a project skeleton with zend I had to insall composer.phar, wich can be downloaded from https://getcomposer.org/download/ 
+For the structure of the project with zend I  had to install composer.phar, which can be downloaded from:
+https://getcomposer.org/download/ 
 
-As an option you can also run the commands below to download it, and set up the minimal skeleton project:
+As an alternative you can also run the commands below to download it, and set up the project structure:
 
-```
+```php
 php -r "readfile('https://getcomposer.org/installer');" | php
 
 
@@ -45,11 +47,11 @@ php composer.phar create-project --repository-url="https://packages.zendframewor
 
 ```
 
-After setting up zf skeleton I`ve started writing our API configs and routes, with the information on zf website and some articles I could build the 'car-scheduler-api\module\CarScheduler' folder wich in a nutshell contains the custom routes, functions and configs extending zf standards.
+After setting up zf skeleton I`ve started writing our API configs and routes, with the information on zf website and some articles I could build the 'car-scheduler-api\module\CarScheduler' folder which the custom routes, functions and configs extending zf standards.
 
 The first Route built at 'car-scheduler-api\module\CarScheduler\config\module.config.php':
 
-```
+```php
     //First Route Attempt
     'router' => array(
         'routes' => array(
@@ -71,10 +73,10 @@ The first Route built at 'car-scheduler-api\module\CarScheduler\config\module.co
     ),
 ```
 
-Even though this route already identifies actions on the Controller using actions "add, get, edit, delete" I`ll be confirming if this can attend the standard "GET, POST, PUT, PATCH, DELETE" methods that I'm used to.
+Even though this route already identifies actions on the Controller using actions "add, get, edit, delete" I'll be confirming if this can cater to the standard "GET, POST, PUT, PATCH, DELETE" methods that I'm used to.
 
 The carsscheduler.db also in the car-scheduler-api\module\CarScheduler folder, was built using SQL syntax and is ready for the first tests:
-```
+```sql
 CREATE TABLE cars (
     id    INT (11)      NOT NULL,
     name  VARCHAR (100) NOT NULL,
@@ -96,13 +98,13 @@ Running npm start on our ~~visits-app~~ now we get this first view:
 
 ![Screenshot](./journal/first_view.jpg)
 
-Now Ill be focusing on the front-end part, so I can design the ZF2 Api with exactly what I need for the front-end.
+Now I'll be focusing on the front-end part, so I can design the ZF2 Api with exactly what I need for the front-end.
 
 =======
 
 14/07/2020
 
-Reworking the structure of the app, found out some bugs and better strategies. Before implementing the PHP Backend, I`ll finish the front end part, changing containers and its content to replicate the test example, so far:
+Reworking the structure of the app, I found out some bugs and better strategies. Before implementing the PHP Backend, I'll finish the front end part, changing containers and its content to replicate the test example, so far:
 
 ![Screenshot](./journal/app_progress.jpg)
 
@@ -126,25 +128,24 @@ Finally I have the final structure and all I have to work on are the custom scri
 
 Progressing to implement the backend part of the application, todays work was all about customizing our front-end to render components based on our back-end data. Post refactoring these lines of codes will receive Available dates and timestamps to be options for the user:
 
+```javascript
+    <div>
+        {days.map(function (day, index) {
+            return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{day}</Button>);
+        })}
+        </div>
+        <div>
+            {timeschedules.map(function (time, index) {
+            return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{time}</Button>);
+        })}
+    </div>
+<Button variant="contained" className={classes.customButtonSchedule} disableElevation onClick={() => {props.removeComponents()}}>Agendar Visita</Button>
 ```
-                        <div>
-                            {days.map(function (day, index) {
-                                return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{day}</Button>);
-                            })}
-                        </div>
-                        <div>
-                            {timeschedules.map(function (time, index) {
-                                return(<Button variant="contained" className={classes.customButtonWeek} key={index}>{time}</Button>);
-                            })}
-                        </div>
 
-                        <Button variant="contained" className={classes.customButtonSchedule} disableElevation onClick={() => {props.removeComponents()}}>Agendar Visita</Button>
-```
-
-With that I can now move to input the backend data using php as requested. The data will contain car information, dates and timestamps availables for schedule. with the backend done I`ll be adjusting the application with five different renders:
+With that I can now move to input the backend data using php as requested. The data will contain car information, dates and timestamps availables for schedule. with the backend done I'll be adjusting the application with five different renders:
 
 - Choose a car
-- Chosse date/timestamp
+- Choose date/timestamp
 - Press Schedule Button
 - Confirm Schedule Info
 - Schedule Success
