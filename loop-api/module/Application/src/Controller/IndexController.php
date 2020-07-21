@@ -8,12 +8,21 @@
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
+use Zend\View\Model\JsonModel;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        $result = new JsonModel(array(
+            'car' => ['name' => 'Fiat Argo',
+                        'specs' => 'REX FULL V8 4P AUTOMATICO',
+                        'price'=> '$100.000',
+                        'city'=> 'Osasco - SP'],
+            'days' => ['01/08', '02/08', '03/08', '04/08', '05/08', '06/08'],
+            'timeschedules' => ['08:00', '10:00', '12:00', '14:00', '16:00', '18:00']
+            ));
+     
+            return $result;
     }
 }

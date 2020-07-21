@@ -11,7 +11,7 @@ class App extends React.Component {
     car: {
       "name": "Fiat Argo",
       "specs": "REX FULL V8 4P AUTOMATICO",
-      "price": "$10.000",
+      "price": "$100.000",
       "city": "Osasco - SP"
     },
     page: 'initial',

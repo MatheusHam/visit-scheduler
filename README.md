@@ -174,6 +174,26 @@ changeComponents = (nextRender) => {
 
 With this now I can set the components that will be rendered according to a page variable. This is the first way I implemented this change of renders, I'm studying other solutions to avoid boilerplate code and overengineering simple components, as React offers a lot of built in functions to Component that I'm not quite aware of.
 
+======
 
+21/07/2020
 
+To start implementing the php backend I did some polishing in the api and set some static data to test the import of those inside the react app, the test result on postman:
 
+![Screenshot](./journal/api_test.png)
+
+The challenge today was all about returning a Json with zend, after some research I had to implement a function inside the application Module so that it would prioritize "JsonStrategy" over the pre-configured views.
+
+```php
+    public function registerJsonStrategy(MvcEvent $e)
+{
+    $app          = $e->getTarget();
+    $locator      = $app->getServiceManager();
+    $view         = $locator->get('Zend\View\View');
+    $jsonStrategy = $locator->get('ViewJsonStrategy');
+
+    $jsonStrategy->attach($view->getEventManager(), 100);
+}
+```
+
+now I can request this data inside react and render my components using this information.
